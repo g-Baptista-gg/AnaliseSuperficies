@@ -38,7 +38,7 @@ ax0.set_ylabel('Arbitrary Units')
 
 
 ax0.plot(bindingEn,counts_tot,'.',label='Data')
-ax0.plot(bindingEn,background,label='Shirley Background')
+ax0.plot(bindingEn,background,':',c='k',label='Tougaard Background')
 ax0.plot(bindingEn,counts_tot-background,'.',label='Data without background')
 
 ax0.legend()
@@ -54,7 +54,7 @@ fig1.set_figheight(4)
 fig1.subplots_adjust(hspace=0.2)
 ax0.invert_xaxis()
 
-ax1[0].plot(bindingEn[::5],counts_tot[::5]-background[::5],'.',label='Data (undersampled)')
+ax1[0].plot(bindingEn[::5],counts_tot[::5]-background[::5],'o',label='Data (undersampled)')
 color = next(ax1[0]._get_lines.prop_cycler)['color']
 ax1[0].plot(bindingEn,counts_Si0_3_2-background,c=color,label='Si 2p 3/2')
 ax1[0].plot(bindingEn,counts_Si0_1_2-background,'--',c=color,label='Si 2p 1/2')
@@ -70,8 +70,8 @@ ax1[0].plot(bindingEn,counts_Si4_1_2-background,'--',c=color,label='SiO$_2$ 2p 1
 color = next(ax1[0]._get_lines.prop_cycler)['color']
 ax1[0].plot(bindingEn,counts_Si0_3_2+counts_Si0_1_2+counts_Si1_3_2+counts_Si1_1_2+counts_Si3_3_2+counts_Si3_1_2+counts_Si4_3_2+counts_Si4_1_2-8*background,c=color,label='Total Fit')
 color = next(ax1[0]._get_lines.prop_cycler)['color']
-ax1[0].plot(bindingEn,background,':',c=color,label='background')
-ax1[0].plot(bindingEn,counts_Si0_3_2+counts_Si0_1_2+counts_Si1_3_2+counts_Si1_1_2+counts_Si3_3_2+counts_Si3_1_2+counts_Si4_3_2+counts_Si4_1_2-7*background,'--',c=color,label='Total Fit + bg')
+ax1[0].plot(bindingEn,background,':',c='k',label='background')
+ax1[0].plot(bindingEn,counts_Si0_3_2+counts_Si0_1_2+counts_Si1_3_2+counts_Si1_1_2+counts_Si3_3_2+counts_Si3_1_2+counts_Si4_3_2+counts_Si4_1_2-7*background,'--',c='k',label='Total Fit + bg')
 ax1[0].legend()
 ax1[0].grid()
 ax1[0].set_ylabel('Arbitrary Units')
