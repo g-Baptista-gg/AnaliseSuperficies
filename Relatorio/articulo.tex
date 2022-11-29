@@ -236,7 +236,7 @@ NOVA School of Science and Technology, NOVA SST, Portugal
 
 \section{Introdução}\label{S_intro}
 
-Para a realização deste trabalho foi fornecido um espetro experimental de espectroscopia do tipo XPS\footnote{X-ray Photoelectron Spectroscopy}, em que se irradiou uma amostra de Si (111) com fotões de $130\ \si{\electronvolt}$. Este espectro foi obtido através de um varrimento de energias com passos de $20\ \si{\milli\electronvolt}$, permitindo analizar \textit{binding energies} dos $96$ aos $98\ \si{\electronvolt}$. Tal \textit{range} corresponde às \textit{binding energies} das orbitais 2p 3/2 e 2p 1/2 de diversos estados de oxidação do Si. Tais orbitais foram escolhidas devido ao facto de no SiO$_2$ ocorrerem 2 ligações duplas e sendo a configuração eletrónica do Si \elconf{Si}, os 4 eletrões menos ligados, ou seja, das orbitais 3p e 3s irão participar nas duas ligações duplas. Sendo assim, a orbital 2p será a orbital menos ligada do sistema no seu maior estado de oxidação.
+Para a realização deste trabalho foi fornecido um espetro experimental de espectroscopia do tipo XPS\footnote{X-ray Photoelectron Spectroscopy}, em que se irradiou uma amostra de Si (111) com fotões de $130\ \si{\electronvolt}$ e se analisaram \textit{core levels} do Si. Este espectro foi obtido através de um varrimento de energias com passos de $20\ \si{\milli\electronvolt}$, permitindo analisar \textit{binding energies} dos $96$ aos $98\ \si{\electronvolt}$. Tal \textit{range} corresponde às \textit{binding energies} das orbitais 2p 3/2 e 2p 1/2 de diversos estados de oxidação do Si. Tais orbitais foram escolhidas devido ao facto de no SiO$_2$ ocorrerem 2 ligações duplas e sendo a configuração eletrónica do Si \elconf{Si}, os 4 eletrões menos ligados, ou seja, das orbitais 3p e 3s irão participar nas duas ligações duplas. Sendo assim, a orbital 2p será a orbital menos ligada do sistema no seu maior estado de oxidação.
 
 
 \section{Tratamento de Dados}
@@ -283,32 +283,55 @@ Observou-se que, para além de quase todo o Si na interface se encontrar complet
   \caption{Parâmetros do fit para as orbitais 2p 3/2 e comparação com valores de referência\cite{Nist}. É possível calcular-se os parâmetros das orbitais 2p 1/2 somando $0.6\ \si{\electronvolt}$ às centroides e dividindo as intensidades por 2. Os restantes parâmetros são os mesmos.}
   \begin{tabular}{lccccc}
     \hline\hline\noalign{\smallskip}
-    \!\!State & \!\!\!\!Centroid &Cent. Diff& \!\!\!\!FWHM& \!\!\!\!Intensity\!\!\!\!&Line\\
-    & \!\!\!\!$\qty(\si{\electronvolt})$&$\qty(\si{\electronvolt})$& \!\!\!\!$\qty(\si{\electronvolt})$& \!\!\!\!(Arb. u.)&Type\\
+    State & Energy &En. Diff.& FWHM& Intensity&Line\\
+    & $\qty(\si{\electronvolt})$&$\qty(\si{\electronvolt})$& $\qty(\si{\electronvolt})$& (Arb. u.)&Type\\
     \hline\noalign{\smallskip}
-    \!\!Si &  -- && (2) & [16,64]&a\\
-    \!\!Si$^{1+}$& [5,11]&& 3 & [10,40]&b\\
-    \!\!Si$^{3+}$& [17,23]&& 3& [4,16]&c\\
-    \!\!SiO$_2$ & [9,12] && 1 & [10,40]&d\\
+    Si &98.85&& 0.657 &10.087&SGL(50)\\
+    Si$^{1+}$&99.99&& 1.299 & 8.0485&SGL(40)\\
+    Si$^{3+}$&101.77&&1.329&37.911&SGL(30)\\
+    SiO$_2$ & 102.84&&1.341&221.6&SGL(10)\\
     \hline
     \end{tabular}
     \label{table:params}
 \end{table}
 
 
-Os resultados obtidos (Tab. \ref{table:params} e Fig. \ref{fig:tot}) fazem sentido visto que, a remoção de eletrões no processo de oxidação leva a uma menor energia de repulsão entre os restantes, levando a um aumento da \textit{binding energy} para estados mais oxidados. Também se observa que a FWHM, tal como a componente Gaussiana, aumentam com o estado de oxidação. Também é de referir que os valores divergem ligeiramente de \cite{Himpsel} devido a diferentes contribuições de Estado Sólido.
+Os resultados obtidos (Tab. \ref{table:params} e Fig. \ref{fig:tot}) fazem sentido visto que, a remoção de eletrões no processo de oxidação leva a uma menor energia de repulsão entre os restantes, levando a um aumento da \textit{binding energy} para estados mais oxidados. Também se observa que a FWHM, tal como a componente Gaussiana, aumentam com o estado de oxidação. Tal pode dever-se ao aumento da complexidade do sistema, devido à ligação entre os átomos. Também é de referir que os valores divergem ligeiramente de \cite{Himpsel} devido a diferentes contribuições de Estado Sólido.
 
 
 
 \section{Quantificação}
 
+\subsection{Cálculo da estequiometria}
+
 Procedeu-se ao cálculo da estequiometria da interface com base numa simples aproximação mencionada em \cite{Himpsel}. Serão calculados os pesos de cada uma das intensidades sendo necessário primeiro proceder à sua normalização com base nas secções eficazes de ionização. Resumidamente:
 
 \begin{gather}
-  x_i= \qty(\frac{I_i}{\sigma_i})\cdot\qty(\sum_i^n \frac{I_i}{\sigma_i})^{-1} 
+  x_i= \qty(\frac{I_i}{\sigma_i})\cdot\qty(\sum_i^n \frac{I_i}{\sigma_i})^{-1}
+  \label{eq:quant}
 \end{gather}
 
-Os valores de $\sigma_i$ para uma energia de feixe de $130\ \si{\electronvolt}$ foram consultados na \textit{TABLE II} de \cite{Himpsel}
+Os valores de $\sigma_i$ representam a secção eficaz de fotoionização da orbital 2p para o estado de oxidação $i$ normalizada em relação à para o Si neutro e, para uma energia de feixe de $130\ \si{\electronvolt}$ foram consultados em \textit{TABLE II} de \cite{Himpsel}. Tendo em conta a Eq. \ref{eq:quant}, é possível calcular-se agora a estequiometria do sistema. Esta será calculada (Tab. \ref{table:esteq})para o sistema no seu total, $x_i$ tot., (Si totalmente oxidado, os diferentes estados de oxidação e Si neutro) e para o sistema em estado de oxidação, $x_i$ oxi., (totalmente oxidado e oxidações parciais). Tal deve-se ao facto de se considerarem 2 layers na amostra (uma superficial, contendo os estados de oxidação, e outra contendo Si puro). Mais uma vez esta análise apenas será realizada para os acoplamentos 2p 3/2 devido ao facto de o resultado ser o mesmo caso fossem considerados tambem os 2p 1/2, devido à \textit{constraint} imposta aquando o processo de \textit{fitting}, onde se forçaram estes a possuir metade da intensidade dos anteriores.
+
+
+
+
+\begin{table}[h!]
+  \centering
+  \caption{Quantificação da presença de diferentes estados de oxidação na amostra}
+  \begin{tabular}{lccccc}
+    \hline\hline\noalign{\smallskip}
+    State & $I_i$ &$\sigma_i$& $I_i/\sigma$& $x_i$ tot.&$x_i$ oxi.\\
+    \hline\noalign{\smallskip}
+    Si &10.087&1& 10.087&7.15\%&---\\
+    Si$^{1+}$&8.045&1.0& 8.045 &5.70\% &6.14\%\\
+    Si$^{3+}$&37.911&1.7&22.300&15.80\%&17.02\%\\
+    SiO$_2$ &221.6&2.2&100.7&71.35\%&76.84\%\\
+    \hline
+    \end{tabular}
+    \label{table:esteq}
+\end{table}
+
 
 
 
