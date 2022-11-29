@@ -52,7 +52,7 @@ fig1,ax1=plt.subplots(2,1,sharex=True,gridspec_kw={'height_ratios': [5, 1]})
 
 fig1.set_figheight(4)
 fig1.subplots_adjust(hspace=0.2)
-ax0.invert_xaxis()
+ax1[0].invert_xaxis()
 
 ax1[0].plot(bindingEn[::5],counts_tot[::5]-background[::5],'o',label='Data (undersampled)')
 color = next(ax1[0]._get_lines.prop_cycler)['color']
@@ -81,6 +81,6 @@ ax1[1].plot(bindingEn,residuals,'-')
 ax1[1].set_ylabel('Norm. Res.')
 ax1[1].grid()
 
-fig0.savefig('data_init.pdf',dpi=300)
-fig1.savefig('fits.pdf',dpi=300)
+fig0.savefig('Relatorio/Figuras/data_init.pdf',dpi=300)
+fig1.savefig('Relatorio/Figuras/fits.pdf',dpi=300)
 plt.show()

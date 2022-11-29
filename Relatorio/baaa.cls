@@ -6,13 +6,13 @@
 % v2.1, 28.may.2015
 %
 % v2.2, 04/03/2016 (D. Carpintero):
-%   added use of Spanish or English hyphenation according to \contriblanguage
+%   added use of portuguese or English hyphenation according to \contriblanguage
 %   commented out the redefinition of \footnotelayout
 %   added abbrev. of Celestial Mechanics and Dynamical Astronomy
 %   changed abbrev. of the Boletín AAA from baas (?) to baaa
 % v2.2.1, 06/03/2016 (D. Carpintero):
 %   corrected some misprints (languaje, presentación, chose)
-%   added Spanish mathematical functions
+%   added portuguese mathematical functions
 %   added macros for degrees etc. over the decimal point
 %   added family of arial-type font for tensors
 % v2.2.2, 07/03/2016 (D. Carpintero)
@@ -22,13 +22,13 @@
 %      as RevMexAA (SC) (as used by that journal)
 %   corrected bug in subindices max and min
 %   added use of arial-type font of tensors in math mode
-%   removed production of decimal comma in mathematical mode (Spanish)
+%   removed production of decimal comma in mathematical mode (portuguese)
 % v 2.2.3, 08/03/2016 (D. Carpintero)
 %   corrected font arial-type, avoiding cmss7 and cmss5 which are not present in
 %      the standard TeX. Changed to "cmss10 at 7pt" and 5 pt; being sans serif
 %      this doesn't affect the quality of subscrpits.
 % v 2.2.4, 12/03/2016 (D. Carpintero)
-%   changed \tablename --> \tablaname because 'spanish' style puts Cuadro 
+%   changed \tablename --> \tablaname because 'portuguese' style puts Cuadro 
 %      instead of Tabla, despite 'es-table' (not recognized) or various 
 %      def-new-renewcommand's inserted here and there.
 % v 2.2.5, 16/03/2016 (D. Carpintero)
@@ -154,7 +154,7 @@
 
 \ProcessOptions % Process options, executes the code fore each option 
 
-%}}}F
+%}}}
 
 
 % SET LENGTHS AND COMMANDS
@@ -361,7 +361,7 @@
 %     \PackageError{BAAA}%
 %     {^^JPOR FAVOR ELIJA UN AREA TEMATICA
 %     ^^JPLEASE CHOSE A THEMATIC AREA}%
-%     {complete contriblanguage field, either 0 (spanish) or 1 (english)}
+%     {complete contriblanguage field, either 0 (portuguese) or 1 (english)}
 %     \stop
 %   \else \ifnum #1 < 0
 %      \relax
@@ -369,14 +369,14 @@
 %     \PackageError{BAAA}%
 %     {^^JPOR FAVOR ELIJA UN AREA TEMATICA
 %     ^^JPLEASE CHOSE A THEMATIC AREA}%
-%     {complete contriblanguage field, either 0 (spanish) or 1 (english)}
+%     {complete contriblanguage field, either 0 (portuguese) or 1 (english)}
 %     \stop
 %   \fi                                  
 % }
 
 %
 % Language-dependent definitions
-% Contribution languages: 0 = Spanish / 1 = English
+% Contribution languages: 0 = portuguese / 1 = English
 %
 \def\contriblanguage#1
 {
@@ -396,7 +396,7 @@
     \def\tablaname{Tabela}
     \def\partname{Parte}
     \def\appendixname{Apêndice}
-    \def\cdate{ - Novembro de 2022}
+    \def\cdate{ - Novembro 2022}
     \def\contribtype##1{\def\ctypename{\ifnum ##1 = 1{Presentaci\'on mural}
                                        \else \ifnum ##1 = 2{Presentaci\'on oral}
                                        \else \ifnum ##1 = 3{Informe invitado}
@@ -437,7 +437,7 @@
   \else
      \PackageError{BAAA}%
      {POR FAVOR ELIJA UN IDIOMA / PLEASE CHOOSE A LANGUAGE}%
-     {complete contriblanguage field, either 0 (Spanish) or 1 (English)}
+     {complete contriblanguage field, either 0 (portuguese) or 1 (English)}
      \stop
   \fi
   \fi
@@ -526,8 +526,8 @@
 {
    %%\def\@oddfoot{{\journalacronym}, {\journalvol}, {\journalyear} \hfill\small\thepage}
    %%\def\@evenfoot{\small \thepage\hfill {\journalacronym}, {\journalvol}, {\journalyear}}
-   \def\@oddfoot{Novembro, 2022 \hfill}
-   \def\@evenfoot{\hfill Novembro, 2022}
+   \def\@oddfoot{Novembro, 2022 \hfill Página \thepage}
+   \def\@evenfoot{Página \thepage \hfill Novembro, 2022}
    \def\@evenhead{\hfil\the\titlerunning\leftmark\hfil}%
    \def\@oddhead{\small\hfil\rightmark\the\authorrunning\hfil}%
    \let\@mkboth\@gobbletwo
@@ -702,7 +702,7 @@
          \setlength{\unitlength}{1pt}
          \begin{picture}(0,0) \put(-20,-80){\usebox{\mygraphic}} \end{picture} 
       NOVA University\\
-      \small{\journaleditors}& School of Science and technology\\
+      \small{\journaleditors}& School of Science and Technology\\
       \hline \normalsize
       \end{tabular}
   }
@@ -806,7 +806,7 @@
   \leftskip=0.7cm
   \rightskip=0.7cm
   \small\rm
-\selectlanguage{spanish}
+\selectlanguage{portuguese}
   \@resumen
 %
 % Print abstract
@@ -994,7 +994,7 @@
 \scriptscriptfont\arialfam=\cincoarial
 \def\arial{\fam\arialfam\diezarial}
 %
-% El lenguaje 'spanish' de 'babel' usa coma decimal en modo matemático; el
+% El lenguaje 'portuguese' de 'babel' usa coma decimal en modo matemático; el
 % estilo BAAA usa punto decimal aun en textos en castellano:
 %
 

@@ -14,9 +14,9 @@
 %%    Added dot in "eds." (functions format.editors and format.editors.extra)
 %%    "~" defined as an unbreakable space, to avoid being interpreted as a
 %%       tilde before n,N or as a printable character in the final list of
-%%       references when using "spanish".
+%%       references when using "portuguese".
 %%    Eliminated the tilde in et~al. because it is interpreted in labels before
-%%       entering the 'thebibliography' environment, and thus in "spanish" it
+%%       entering the 'thebibliography' environment, and thus in "portuguese" it
 %%       is read as a printable character despite the above definition.
 %%    Old and useless comments were eliminated.
 %% V 3.1 (22/03/2016, D. Carpintero)
