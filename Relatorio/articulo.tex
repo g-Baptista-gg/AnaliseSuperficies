@@ -139,7 +139,7 @@
 %   please use linebreaks (\\).                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Análise de interface Si/SiO2\\através de espectro de XPS}
+\title{Análise de interface SiO2/Si\\através de espectro de XPS}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  ******************* Título encabezado / Running title ******************  %
@@ -209,9 +209,9 @@ NOVA School of Science and Technology, NOVA SST, Portugal
 %   five hundred) characters, including spaces.                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\resumen{Neste trabalho irá proceder-se à análise de um espetro de XPS adquirido a partir da irradiação de uma interface SiO$_2$/Si com orientação (111) usando um feixe de fotões com energia de $130\ \si{\electronvolt}$, sendo neste caso estudadas as \textit{binding energies} das orbitais \textit{2p}. Ao espetro obtido será realizado um fit que englobe as diferentes contribuições dos diversos estados de oxidação do Si e posteriormente a determinação da estequiometria e espessura de cada uma das camadas presentes.}
+\resumen{Neste trabalho irá proceder-se à análise de um espetro de XPS adquirido a partir da irradiação de uma interface SiO$_2$/Si com orientação (111) usando um feixe de fotões com energia de $130\ \si{\electronvolt}$, sendo neste caso estudadas as \textit{binding energies} das orbitais 2p. Ao espetro obtido será realizado um fit que englobe as diferentes contribuições dos diversos estados de oxidação do Si e posteriormente a determinação da estequiometria e espessura de cada uma das camadas presentes.}
 
-\abstract{Neste trabalho irá proceder-se à análise de um espetro de XPS adquirido a partir da irradiação de uma interface SiO$_2$/Si com orientação (111) usando um feixe de fotões com energia de $130\ \si{\electronvolt}$, sendo neste caso estudadas as \textit{binding energies} das orbitais \textit{2p}. Ao espetro obtido será realizado um fit que englobe as diferentes contribuições dos diversos estados de oxidação do Si e posteriormente a determinação da estequiometria e espessura de cada uma das camadas presentes.}
+\abstract{In this project, we will analyse a XPS spectrum aquired during the irradiation of a SiO$_2$/Si (111) interface using an $130\ \si{\electronvolt}$ X-Ray photon beam. This spectrum is related to the 2p orbitals' binding energies of multiple Si oxydated states which will be taken into account whilst performing fitting routines to the data that will then be used in the determination of the sample's stoichiometry and thickness.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                            %
@@ -280,7 +280,7 @@ Observou-se que, para além de quase todo o Si na interface se encontrar complet
 
 \begin{table}[h!]
   \centering
-  \caption{Parâmetros do fit para as orbitais 2p 3/2 e comparação com valores de referência\cite{Nist}. É possível calcular-se os parâmetros das orbitais 2p 1/2 somando $0.6\ \si{\electronvolt}$ às centroides e dividindo as intensidades por 2. Os restantes parâmetros são os mesmos.}
+  \caption{Parâmetros do fit para as orbitais 2p 3/2 e comparação com valores de referência\cite{Nist}. É possível calcular-se os parâmetros das orbitais 2p 1/2 somando $0.6\ \si{\electronvolt}$ às Energias/centroides e dividindo as intensidades por um fator de 2. Os restantes parâmetros são os mesmos. O tipo de linha usado representa uma \textit{pseudo-voigt}, definida como a soma de uma Gaussiana com uma Lorentziana, neste caso com os mesmos parâmetros de média e desvio padrão, sendo o parâmetro usado o peso da parte Lorentziana. Ex:$SGL\qty(x)=\qty(1-0.01\cdot x) G + 0.01\cdot x$ L}
   \begin{tabular}{lccccc}
     \hline\hline\noalign{\smallskip}
     State & Energy &En. Diff.& FWHM& Intensity&Line\\
@@ -296,7 +296,7 @@ Observou-se que, para além de quase todo o Si na interface se encontrar complet
 \end{table}
 
 
-Os resultados obtidos (Tab. \ref{table:params} e Fig. \ref{fig:tot}) fazem sentido visto que, a remoção de eletrões no processo de oxidação leva a uma menor energia de repulsão entre os restantes, levando a um aumento da \textit{binding energy} para estados mais oxidados. Também se observa que a FWHM, tal como a componente Gaussiana, aumentam com o estado de oxidação. Tal pode dever-se ao aumento da complexidade do sistema, devido à ligação entre os átomos. Também é de referir que os valores divergem ligeiramente de \cite{Himpsel} devido a diferentes contribuições de Estado Sólido.
+Os resultados obtidos (Tab. \ref{table:params} e Fig. \ref{fig:tot}) fazem sentido visto que, a remoção de eletrões no processo de oxidação leva a uma menor energia de repulsão entre os restantes (sendo esta convencionalmente positiva), levando a um aumento da \textit{binding energy} para estados mais oxidados. Também se observa que a FWHM, tal como a componente Gaussiana, aumentam com o estado de oxidação. Tal pode dever-se ao aumento da complexidade do sistema, devido à ligação entre os átomos. Também é de referir que os valores divergem ligeiramente de \cite{Himpsel} devido a diferentes contribuições de Estado Sólido.
 
 
 
@@ -333,12 +333,37 @@ Os valores de $\sigma_i$ representam a secção eficaz de fotoionização da orb
 \end{table}
 
 
+Conclui-se, tal como esperado, que a grande maioria da amostra se encontra totalmente oxidada e mais de $90\%$ em pelo menos um estado de oxidação.
+
+\subsection{Determinação da espessura da amostra}
+
+Em \cite{Himpsel} é referênciada a seguinte expressão que permite relacionar razão entre as intensidades, $I$, dos estados e máxima oxidação (SiO$_2$) e oxidação nula (Si) com a \textit{escape depth}, $l$, de tanto o Si como o SiO$_2$, as secções eficazes de fotoionização, $\sigma$, e a espessura da amostra, $d$:
+
+\begin{gather}
+  \frac{I_{\text{SiO}_2}}{I_{\text{Si}}}=\frac{n_{\text{SiO}_2}}{n_{\text{Si}}}\frac{\sigma_{\text{SiO}_2}}{\sigma_{\text{Si}}}\frac{l_{\text{SiO}_2}}{l_{\text{Si}}}\cdot \qty(\exp(\frac{d}{l_{\text{SiO}_2}})-1)
+\end{gather}
+
+O valor de $\frac{I_{\text{SiO}_2}}{I_{\text{Si}}}$ foi obtido anteriormente através dos \textit{fits} realizados, tendo um valor de 21.97, os valores do rácio das secções eficazes, da \textit{escape depth} do Si e do SiO$_2$ para $130\ \si{\electronvolt}$ foram, mais uma vez, retirados de \cite{Himpsel} e possuem um valor de 2.2, $3.3\ \si{\angstrom}$ e $7.1\ \si{\angstrom}$, respetivamente.
+
+É possível agora proceder-se ao cálculo de $d$, deixando o rácio das densidades dos elementos como incógnita\footnote{Uma possível aproximação seria usar o rácio dos valores calculados na estequiometria ao invés deste valor. Utilizando esta aproximação o valor de $d$ seria $1.35\ \si{\angstrom}$, bastante inferior ao esperado.}:
+
+\begin{gather}
+  21.97=\frac{n_{\text{SiO}_2}}{n_{\text{Si}}}\cdot 2.2\cdot\frac{7.1}{3.3}\cdot \qty(\exp(\frac{d}{7.1})-1)\\
+  \exp(\frac{d}{7.1})\approx 4.64\cdot\frac{n_{\text{Si}}}{n_{\text{SiO}_2}}+1\\
+  d=7.1\cdot\ln( 4.64\cdot\frac{n_{\text{Si}}}{n_{\text{SiO}_2}}+1)
+\end{gather}
 
 
+\section{Conclusão}
 
-%\begin{acknowledgement}
+Tendo em conta todos os passos anteriores é possível acordar-se que, de uma maneira geral, foi possível caracterizar-se com algum detalhe a interface analisada. Embora o processo de \textit{fitting} tenha sido algo complicado devido à alta convolução e baixa intensidade dos picos para os estados de menor oxidação, foi possível retirar-se resultados que aparentam alguma coesão e rigor com base na teoria e no esperado.
 
-%\end{acknowledgement}
+No que toca à quantificação dos resultado, foi possível, de uma forma simplista calcular a estequiometria da amostra e, embora não tenha sido possível obter-se um valor numérico para a espessura da amostra, foi possível calcular-se uma aproximação para o cálculo que a permite determinar.
+
+
+\begin{acknowledgement}
+  Gostaria de agradecer à professora Ana Cristina Silva por sempre se ter mostrado disponível aquando o exclarecimento de dúvidas (e foram muitas) durante a realização deste projeto.
+\end{acknowledgement}
 
 
 
