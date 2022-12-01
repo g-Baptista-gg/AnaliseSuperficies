@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex articulo"] 1669811172 "articulo.aux" "articulo.bbl" "articulo" 1669811442
+["bibtex articulo"] 1669811172 "articulo.aux" "articulo.bbl" "articulo" 1669916432
   "/usr/share/texmf-dist/bibtex/bst/base/unsrt.bst" 1650183167 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "articulo.aux" 1669811442 4576 c68a163e60c913e97280ebd4daf91c6c "pdflatex"
+  "articulo.aux" 1669916432 4576 c68a163e60c913e97280ebd4daf91c6c "pdflatex"
   "bibliografia.bib" 1669716664 471 df148a758481f54ecfee14194527d021 ""
   (generated)
   "articulo.bbl"
   "articulo.blg"
-["pdflatex"] 1669811436 "/home/goncalo-gg/Desktop/University/9º Semestre/Análise de Superfícies/Relatório/AnaliseSuperficies/Relatorio/articulo.tex" "articulo.pdf" "articulo" 1669811442
-  "/home/goncalo-gg/Desktop/University/9º Semestre/Análise de Superfícies/Relatório/AnaliseSuperficies/Relatorio/articulo.tex" 1669811436 26896 2a81a8e078687c32576ff9c79f466ffd ""
+["pdflatex"] 1669916428 "/home/goncalo-gg/Desktop/University/9º Semestre/Análise de Superfícies/Relatório/AnaliseSuperficies/Relatorio/articulo.tex" "articulo.pdf" "articulo" 1669916432
+  "/home/goncalo-gg/Desktop/University/9º Semestre/Análise de Superfícies/Relatório/AnaliseSuperficies/Relatorio/articulo.tex" 1669916427 16981 e9e5a12526cf7d662b813d0846f0886e ""
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1650183167 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1650183167 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -236,10 +236,10 @@
   "Figuras/data_init.pdf" 1669716664 60409 705740390963978decc1db3bdf3be0a0 ""
   "Figuras/fits.pdf" 1669716664 95196 fc0349d592aeb9023eb16b4cfdc31a08 ""
   "Novologofct2021.png" 1669716664 616314 ef76ee3cac5a3b43d625660ed590411d ""
-  "articulo.aux" 1669811442 4576 c68a163e60c913e97280ebd4daf91c6c "pdflatex"
+  "articulo.aux" 1669916432 4576 c68a163e60c913e97280ebd4daf91c6c "pdflatex"
   "articulo.bbl" 1669811172 331 f16ec41420d7a62e749822fea644058c "bibtex articulo"
   "articulo.out" 0 -1 0 "pdflatex"
-  "articulo.tex" 1669811436 26896 2a81a8e078687c32576ff9c79f466ffd ""
+  "articulo.tex" 1669916427 16981 e9e5a12526cf7d662b813d0846f0886e ""
   "baaa.cls" 1669716664 45240 9a73db53a7f0999ca185105d275467a5 ""
   (generated)
   "articulo.aux"
