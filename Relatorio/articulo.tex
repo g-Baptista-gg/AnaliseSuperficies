@@ -1,59 +1,6 @@
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%  ************************** AVISO IMPORTANTE **************************    %
-%                                                                            %
-% Éste es un documento de ayuda para los autores que deseen enviar           %
-% trabajos para su consideración en el Boletín de la Asociación Argentina    %
-% de Astronomía.                                                             %
-%                                                                            %
-% Los comentarios en este archivo contienen instrucciones sobre el formato   %
-% obligatorio del mismo, que complementan los instructivos web y PDF.        %
-% Por favor léalos.                                                          %
-%                                                                            %
-%  -No borre los comentarios en este archivo.                                %
-%  -No puede usarse \newcommand o definiciones personalizadas.               %
-%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
-%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
-%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
-%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
-%   en principio ignorados por SiGMa.                                        %
-%                                                                            %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%  ************************** IMPORTANT NOTE ******************************  %
-%                                                                            %
-%  This is a help file for authors who are preparing manuscripts to be       %
-%  considered for publication in the Boletín de la Asociación Argentina      %
-%  de Astronomía.                                                            %
-%                                                                            %
-%  The comments in this file give instructions about the manuscripts'        %
-%  mandatory format, complementing the instructions distributed in the BAAA  %
-%  web and in PDF. Please read them carefully                                %
-%                                                                            %
-%  -Do not delete the comments in this file.                                 %
-%  -Using \newcommand or custom definitions is not allowed.                  %
-%  -SiGMa does not accept articles with compilation errors. Before submission%
-%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
-%   do not produce errors in your terminal. This is the most frequent cause  %
-%   of submission failure. "Warning" messsages are in principle bypassed     %
-%   by SiGMa.                                                                %
-%                                                                            % 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[baaa]{baaa}
- 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%  ******************** Paquetes Latex / Latex Packages *******************  %
-%                                                                            %
-%  -Por favor NO MODIFIQUE estos comandos.                                   %
-%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
-%  'inputenc'.                                                               %
-%                                                                            %
-%  -Please DO NOT CHANGE these commands.                                     %
-%  -If your text editor does not encodes in UTF8, please change the          %
-%  'inputec' package                                                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
 \usepackage[pdftex]{hyperref}
 \usepackage{subfigure}
@@ -161,7 +108,7 @@ Observou-se que, para além de quase todo o Si na interface se encontrar complet
 
 \begin{table}[h!]
   \centering
-  \caption{Parâmetros do fit para as orbitais 2p 3/2 e comparação com valores de referência\cite{Nist}. É possível calcular-se os parâmetros das orbitais 2p 1/2 somando $0.6\ \si{\electronvolt}$ às Energias/centroides e dividindo as intensidades por um fator de 2. Os restantes parâmetros são os mesmos. O tipo de linha usado representa uma \textit{pseudo-voigt}, definida como a soma de uma Gaussiana com uma Lorentziana, neste caso com os mesmos parâmetros de média e desvio padrão, sendo o parâmetro usado o peso da parte Lorentziana. Ex:$SGL\qty(x)=\qty(1-0.01\cdot x) G + 0.01\cdot x$ L}
+  \caption{Parâmetros do fit para as orbitais 2p 3/2 e comparação com valores de referência\cite{Nist}. É possível calcular-se os parâmetros das orbitais 2p 1/2 somando $0.6\ \si{\electronvolt}$ às Energias/centroides e dividindo as intensidades por um fator de 2. Os restantes parâmetros são os mesmos. O tipo de linha usado representa uma \textit{pseudo-voigt}, definida como a soma de uma Gaussiana com uma Lorentziana, neste caso com a mesma média, sendo o parâmetro usado o peso da parte Lorentziana. Ex:$SGL\qty(x)=\qty(1-0.01\cdot x) G + 0.01\cdot x$ L. É de notar que, para uma mesma $FWHM$, os desvios padrões não serão os mesmos: $FWHM=2.35{\sigma_G}^2=2{\sigma_L}^2$.}
   \begin{tabular}{lccccc}
     \hline\hline\noalign{\smallskip}
     State & Energy &En. Diff.& FWHM& Intensity&Line\\
@@ -216,9 +163,9 @@ Os valores de $\sigma_i$ representam a secção eficaz de fotoionização da orb
 
 Conclui-se, tal como esperado, que a grande maioria da amostra se encontra totalmente oxidada e mais de $90\%$ em pelo menos um estado de oxidação.
 
-\subsection{Determinação da espessura da amostra}
+\subsection{Determinação da espessura da camada de SiO2}
 
-Em \cite{Himpsel} é referênciada a seguinte expressão que permite relacionar razão entre as intensidades, $I$, dos estados e máxima oxidação (SiO$_2$) e oxidação nula (Si) com a \textit{escape depth}, $l$, de tanto o Si como o SiO$_2$, as secções eficazes de fotoionização, $\sigma$, e a espessura da amostra, $d$:
+Em \cite{Himpsel} é referênciada a seguinte expressão que permite relacionar razão entre as intensidades, $I$, dos estados e máxima oxidação (SiO$_2$) e oxidação nula (Si) com a \textit{escape depth}, $l$, de tanto o Si como o SiO$_2$, as secções eficazes de fotoionização, $\sigma$, e a espessura do óxido, $d$:
 
 \begin{gather}
   \frac{I_{\text{SiO}_2}}{I_{\text{Si}}}=\frac{n_{\text{SiO}_2}}{n_{\text{Si}}}\frac{\sigma_{\text{SiO}_2}}{\sigma_{\text{Si}}}\frac{l_{\text{SiO}_2}}{l_{\text{Si}}}\cdot \qty(\exp(\frac{d}{l_{\text{SiO}_2}})-1)
@@ -226,13 +173,16 @@ Em \cite{Himpsel} é referênciada a seguinte expressão que permite relacionar 
 
 O valor de $\frac{I_{\text{SiO}_2}}{I_{\text{Si}}}$ foi obtido anteriormente através dos \textit{fits} realizados, tendo um valor de 21.97, os valores do rácio das secções eficazes, da \textit{escape depth} do Si e do SiO$_2$ para $130\ \si{\electronvolt}$ foram, mais uma vez, retirados de \cite{Himpsel} e possuem um valor de 2.2, $3.3\ \si{\angstrom}$ e $7.1\ \si{\angstrom}$, respetivamente.
 
-É possível agora proceder-se ao cálculo de $d$, deixando o rácio das densidades dos elementos como incógnita\footnote{Uma possível aproximação seria usar o rácio dos valores calculados na estequiometria ao invés deste valor. Utilizando esta aproximação o valor de $d$ seria $1.35\ \si{\angstrom}$, bastante inferior ao esperado.}:
+É possível agora proceder-se ao cálculo de $d$:
 
 \begin{gather}
   21.97=\frac{n_{\text{SiO}_2}}{n_{\text{Si}}}\cdot 2.2\cdot\frac{7.1}{3.3}\cdot \qty(\exp(\frac{d}{7.1})-1)\\
   \exp(\frac{d}{7.1})\approx 4.64\cdot\frac{n_{\text{Si}}}{n_{\text{SiO}_2}}+1\\
   d=7.1\cdot\ln( 4.64\cdot\frac{n_{\text{Si}}}{n_{\text{SiO}_2}}+1)
 \end{gather}
+
+Consultando agora os valores das densidades\cite{Himpsel}: $n_{\text{SiO}_2}=2.28\cdot 10^{22}\ \si{\centi\meter^{-3}}$ e $n_{\text{Si}}=5.00\cdot 10^{22}\ \si{\centi\meter^{-3}}$ calcula-se uma espessura para a camada de SiO$_2$ de $d=17.14\ \si{\angstrom}$.
+
 
 
 \section{Conclusão}
